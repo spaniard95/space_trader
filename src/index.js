@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import{ TraderInfo, Market} from './components';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TraderInfo />
+    <Market />
   </React.StrictMode>,
   document.getElementById('root')
 );

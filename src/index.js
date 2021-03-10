@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import{ TraderInfo, Market} from './components';
-
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TraderInfo />
-    <Market />
+      <TraderInfo />
+      <Market />
   </React.StrictMode>,
   document.getElementById('root')
 );

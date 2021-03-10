@@ -3,5 +3,5 @@ import  TraderInfo  from "./traderInfo";
 
 export {
     Market, 
-    TraderInfo
+    TraderInfo,
 };

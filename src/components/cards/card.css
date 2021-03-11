@@ -1,12 +1,4 @@
 .flex-item {
-    background: rgb(221, 219, 219);
-    flex-wrap: wrap;
-    padding: 5px;
-    width: 40%;
-    height: 150px;
-    margin-top: 10px;
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
+    background: rgb(9, 116, 9);
+   
   }

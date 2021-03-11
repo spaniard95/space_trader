@@ -1,4 +1,5 @@
 import React from "react";
+import "./card.css";
 
 const Card = ({info}) => {
   return (
@@ -6,7 +7,7 @@ const Card = ({info}) => {
       <ul>
         {Object.entries(info).map(
           ([key, value]) => 
-            <li>{` ${key} : ${value}`}</li>
+            <li class="flex-item">{` ${key} : ${value}`}</li>
           )
         }
       </ul>

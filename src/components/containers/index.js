@@ -1,4 +1,7 @@
-import AvailableLoans from "./AvailableLoans";
+import AvailableItems from "./AvailableItems";
+import AvailableBuy from "./AvailableBuy";
+
 export {
-    AvailableLoans
+    AvailableItems,
+    AvailableBuy
 }

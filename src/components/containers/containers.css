@@ -3,15 +3,22 @@
     flex-direction: row;
     align-content: flex-start;
     align-items:flex-start;
+    background-color: green;
+    color: green;
 }
 .flex-item {
-    background: rgb(221, 219, 219);
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
+    background: rgb(167, 94, 94);
+    color: rgb(105, 67, 67);
+    list-style-type: none;
   }
+  #divider{
+    background-color: rgb(36, 18, 18);
+     color: rgb(204, 200, 200);
+     height: 50px;
+     display: flex;
+     flex-wrap: wrap;
+     align-content: center;
+     padding-left: 20px;
+     font-size: 25px;
+     font-family: 'Times New Roman', Times, serif;
+ }

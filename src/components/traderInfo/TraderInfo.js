@@ -1,28 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useFetch } from  '..//..//lib';
+import "./traderInfo.css";
 
  const TraderInfo = () => {
-  // const [error, setError] = useState(null);
-  // const [isLoaded, setIsLoaded] = useState(false);
-  // const [trader, setTrader] = useState(null);
-
-  // useEffect(async () => {
-  //   await fetch('https://api.spacetraders.io/users/spaniard?token=7b6c05e1-7371-409d-a14a-39db9c8978e0', {
-  //     method:"GET"
-  //   })
-  //     .then(res => res.json())
-  //     .then(
-  //       data => {
-  //         setIsLoaded(true);
-  //         setTrader(data.user);
-  //         console.log(data.user)
-  //     },
-  //     (error) => {
-  //       setIsLoaded(true);
-  //       setError(error);
-  //     }
-  //   )
-  // }, []);
+  
   const {data, loading, error} = useFetch('https://api.spacetraders.io/users/spaniard?token=7b6c05e1-7371-409d-a14a-39db9c8978e0');
 
   if (error) {
@@ -32,6 +13,7 @@ import { useFetch } from  '..//..//lib';
   } else {
     return (
       <div>
+        <header id="header">SPACE TRADE CENTER</header>
         <text>
           {data &&
             <p>

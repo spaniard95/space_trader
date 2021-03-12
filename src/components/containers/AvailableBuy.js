@@ -3,8 +3,8 @@ import { Card } from "../cards";
 import './containers.css';
 
 //similar to AvailableItems component but it gets fetch data from Hoc withShipsFetch
-const AvailableBuy = (dataKey, data, loading ,error) => {
-  const [items] = Object.values(dataKey); //get the key for the json
+const AvailableBuy = ({dataKey, data, loading ,error}) => {
+  // const [items] = Object.values(dataKey); //get the key for the json
   
   if (error) return <div>Error: {error.message}</div>;
   
@@ -14,7 +14,7 @@ const AvailableBuy = (dataKey, data, loading ,error) => {
         <p id="divider">Available loans</p>
         <ul class="flex-container">
         {data &&
-            data[items].map(item  => 
+            data[dataKey]?.map(item  => 
               <Card info={item} />
             )
         }

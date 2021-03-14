@@ -1,3 +1,3 @@
-import TraderInfo  from "./TraderInfo";
+import TraderInfo from "./TraderInfo";
 
 export default TraderInfo;

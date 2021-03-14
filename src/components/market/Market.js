@@ -1,20 +1,34 @@
 import React from 'react';
-import { AvailableItems, AvailableBuy } from '../containers';
-import { withShipsFetch } from "../hoc";
+import { AvailableBuy } from '../containers';
+import { withFetch } from "../hoc";
 import './market.css';
 
-const AvailableBuyWithFetch = withShipsFetch(AvailableBuy); //hoc that fetches loans for now, does the same as AvailableItems component
+const url = {
+    ships : "https://api.spacetraders.io/game/ships?token=7b6c05e1-7371-409d-a14a-39db9c8978e0",
+    loans : "https://api.spacetraders.io/game/loans?token=7b6c05e1-7371-409d-a14a-39db9c8978e0"
+}
 
-function Market() {
-  
+const AvailableBuyShipFetch = withFetch(AvailableBuy, url.ships);     //hoc 
+const AvailableBuyLoansFetch = withFetch(AvailableBuy, url.loans);    //hoc 
 
+const Market = () => {
     return (
         <div>
-            <p id="divider">Market</p>
-            <ul class="flex-container">
-                <AvailableItems dataKey={"loans"} />
-                <AvailableBuyWithFetch dataKey="loans" />
-            </ul>    
+            <t1 class="divider">Market</t1>
+            <section class="lists-container">    
+                <div class="list">
+                    <t2 class="divider">Available Loans</t2>
+                    <ul class="list-items">
+                        <AvailableBuyLoansFetch dataKey="loans" />
+                    </ul>
+                </div>
+                <div class="list">
+                <t2 class="divider">Available ships</t2>
+                    <ul class="list-items">
+                        <AvailableBuyShipFetch dataKey="ships" />
+                    </ul>
+                </div>
+            </section>
         </div>
     );
 };

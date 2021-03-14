@@ -1,0 +1,7 @@
+#hover-click {
+    color: rgb(47, 39, 39);
+}
+
+#hover-click :hover{
+    color: rgb(199, 190, 190);
+}

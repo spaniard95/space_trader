@@ -1,7 +1,7 @@
 import  Market from "./market";
-import  TraderInfo  from "./traderInfo";
+import  Menu  from "./menu";
 
 export {
     Market, 
-    TraderInfo,
+    Menu,
 };

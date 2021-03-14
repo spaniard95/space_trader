@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { useFetch } from  '..//..//lib';
+import React from "react";
+import { withHoverClick } from "../hoc";
+import{ Card } from "../cards";
+import Expand from "../expand";
 import "./traderInfo.css";
 
- const TraderInfo = () => {
-  
-  const {data, loading, error} = useFetch('https://api.spacetraders.io/users/spaniard?token=7b6c05e1-7371-409d-a14a-39db9c8978e0');
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (loading) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <div>
-        <header id="header">SPACE TRADE CENTER</header>
-        <text>
-          {data &&
-            <p>
-              Trader: {data.user.username}<br />
-              #Ships : {data.user.ships.length}<br />
-              Funds : {data.user.credits} $<br />
-              #Loans : {data.user.loans.length} Total : {data.user.loans.reduce((loansT, loan) => loansT + loan, 0)}$<br />
-            </p>
-          }
-        </text>
-      </div>
-    );
-  }
-};
+const TraderInfo = ({data, loading, error}) => {
+    const Ho = withHoverClick(Expand);
+    
+    if (error) {
+        return <div>Error: {error.message}</div>;
+      } else if (loading) {
+        return <div>Loading...</div>;
+      } else {
+        const co = withHoverClick(<Card info={data.user.username}/>);
+        return (
+          <div>
+            <text>
+              {data &&
+                <ul class="trader-items">
+                  <li>Trader: {data.user.username}</li>
+                  <li onClick={() => console.log("afsd")}> #Ships : {data.user.ships.length}<br /></li>
+                  {/* <Ho info={data.user.username}/> */}
+                  <Expand/>
+                  <li>Funds : {data.user.credits} </li>
+                  <li> #Loans : {data.user.loans.length}   Total : {data.user.loans.reduce((loansT, loan) => loansT + loan, 0)}</li>
+                </ul>
+              }
+            </text>
+          </div>
+        );
+      }
+}
 
 export default TraderInfo;
-
-

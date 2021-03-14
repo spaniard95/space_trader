@@ -7,9 +7,10 @@ const Card = ({info}) => {
       <ul>
         {Object.entries(info).map(
           ([key, value]) => 
-            <li class="flex-item">{` ${key} : ${value}`}</li>
+            <li class="list-items">{` ${key} : ${value}`}</li>
           )
         }
+        <button>buy</button>
       </ul>
     </li>
   )

@@ -1,7 +1,7 @@
-import hoc from "./hoc";
-import withShipsFetch from "./withShipsFetch";
+import withHoverClick from "./withHoverClick";
+import withFetch from "./withFetch";
 
 export {
-    hoc,
-    withShipsFetch,
+    withHoverClick,
+    withFetch,
 }

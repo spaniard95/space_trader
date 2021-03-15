@@ -16,7 +16,6 @@ const AvailableBuy = ({dataKey, data, loading ,error}) => {
             )
         }   
       </div>
-    
 }
 
 export default AvailableBuy;

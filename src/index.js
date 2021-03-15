@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import{ Menu, Market} from './components';
+import{ Menu, Market, Login} from './components';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
       <Menu />
       <Market />
+      {/* <Login/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

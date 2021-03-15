@@ -3,9 +3,10 @@ import { AvailableBuy } from '../containers';
 import { withFetch } from "../hoc";
 import './market.css';
 
+const token = "5e58b0ac-1f71-47fd-ad68-0cd051fe3a34";
 const url = {
-    ships : "https://api.spacetraders.io/game/ships?token=7b6c05e1-7371-409d-a14a-39db9c8978e0",
-    loans : "https://api.spacetraders.io/game/loans?token=7b6c05e1-7371-409d-a14a-39db9c8978e0"
+    ships : `https://api.spacetraders.io/game/ships?token=${token}`,
+    loans : `https://api.spacetraders.io/game/loans?token=${token}`
 }
 
 const AvailableBuyShipFetch = withFetch(AvailableBuy, url.ships);     //hoc 

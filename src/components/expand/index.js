@@ -1,3 +1,6 @@
-import Expand from "./Expand";
+import ExpandClick from "./ExpandClick";
 
-export default Expand;
+export  {
+        ExpandClick,
+
+};

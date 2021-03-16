@@ -1,5 +1,6 @@
 import React from "react";
 import "./card.css";
+import { ExpandClick } from "../expand";
 
 const Card = ({info}) => {
   return (
@@ -7,10 +8,12 @@ const Card = ({info}) => {
       <ul>
         {Object.entries(info).map(
           ([key, value]) => 
-            <li class="list-items">{` ${key} : ${value}`}</li>
+            (typeof value!=="object")? 
+              <li class="row-items">{` ${key} : ${value}`}</li> : 
+              <ExpandClick data={info} dataKey={key}/>
+            // <li class="list-items">{` ${key} : ${value}`}</li>
           )
         }
-        <button>buy</button>
       </ul>
     </li>
   )

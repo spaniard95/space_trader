@@ -12,7 +12,7 @@ const AvailableBuy = ({dataKey, data, loading ,error}) => {
     :<div>  
         {data &&
             data[dataKey]?.map(item  => 
-              <li class="list-items"><Card info={item} /></li>
+              <li class="container-items"><Card info={item} /></li>
             )
         }   
       </div>

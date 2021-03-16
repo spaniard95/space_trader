@@ -1,5 +1,6 @@
 .trader-items{
     list-style-type: none;
+    width:550px;
 }
 
 .trader-items li  {
@@ -15,20 +16,6 @@
     margin-bottom: 0.4rem;
     word-wrap: break-word;
     cursor:auto;
-}
-#ships-item{
-    background: rgb(160, 160, 200);
-    cursor: pointer;
-}
-#ships-item:hover{
-    background: rgb(119, 119, 190);
-}
-#loans-item{
-    background: rgb(160, 160, 200);
-    cursor: pointer;
-}
-#loans-item:hover{
-    background: rgb(119, 119, 190);
 }
 /* .hover-click {
         font-size: 1.4rem;

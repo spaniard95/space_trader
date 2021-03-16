@@ -1,3 +1,23 @@
 #hide-item{
     list-style: none;
 }
+#expand-item{
+    background: rgb(135, 135, 153);
+    list-style: none;
+    cursor: pointer;
+    content: "\2212";
+    border-style:hidden;
+}
+#expand-item:hover{
+    background: rgb(107, 107, 179);
+}
+#expand-item::after{
+    content: '\002B';
+    float: right;
+}
+.new-items{
+    border-style: solid;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+

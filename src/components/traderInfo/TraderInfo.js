@@ -10,7 +10,7 @@ const TraderInfo = ({data, loading, error}) => {
   } else if (loading) {
       return <div>Loading...</div>;
   } else {
-    const Ho = withHoverClick(<Card info={data.user.username}/>);
+    const Ho = withHoverClick(<Card info={data?.user?.username}/>);
       return (
       <div>
         <text>

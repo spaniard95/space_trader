@@ -5,7 +5,7 @@
   background-color: rgb(163, 162, 173);
   padding: 0.80rem 0.6rem;
   margin: 10px;
-  color: #130909;
+  color: #332020;
   border-style:solid;
   border-radius: 0.5rem;
   margin-bottom: 0.6rem;
@@ -13,9 +13,6 @@
   list-style: none;
 }
 .list-items :last-of-type {
-  margin-bottom: ;
+ 
 }
 
-/* .list-items :hover {
-  background-color: rgb(218, 163, 163);
-} */

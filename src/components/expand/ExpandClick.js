@@ -2,16 +2,20 @@ import { useState } from "react";
 import "./expand.css";
 import ExpandList from "./ExpandList";
 
-const ExpandClick = ({data, dataKey}) => {
-    
+//hoc can be used
+const ExpandClick = ({data, dataKey, type}) => {
     const [expand, setExpand] = useState(false);
-    // const numItems = data[dataKey].length;
+    console.log(data)
     return (
-        <li id="expand-item" 
-            onClick= {() => {setExpand(prev => !prev)}}>
-                {dataKey}: {expand ? <ExpandList info={data[dataKey]}/> : null }
-        </li>
+        <li id="expand-item">
+            <button id="expand-button" onClick={() => setExpand(prev => !prev)}>+</button>
+            {dataKey}: {expand ? 
+                <li><ExpandList info={data[dataKey]}/></li>
+                : 
+                null 
+            }
+        </li> 
     );
-}
+};
 
 export default ExpandClick;
